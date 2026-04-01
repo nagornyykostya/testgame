@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Tower Crash Buildings Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+        h1 { text-align: center; }
+        #game-board { display: flex; justify-content: center; margin-top: 20px; }
+        .building { width: 100px; height: 200px; background-color: #8B0000; margin: 5px; position: relative; }
+        .tower { width: 20px; height: 50px; background-color: #FFD700; position: absolute; top: -50px; left: 40px; }
+        #score { text-align: center; margin-top: 20px; font-size: 24px; }
+    </style>
+</head>
+<body>
+    <h1>Tower Crash Buildings Game</h1>
+    <div id="score">Score: 0</div>
+    <div id="game-board">
+        <div class="building"><div class="tower"></div></div>
+        <div class="building"><div class="tower"></div></div>
+        <div class="building"><div class="tower"></div></div>
+    </div>
+    <script>
+        let score = 0;
+        const scoreDisplay = document.getElementById('score');
+        // Logic for game mechanics would go here
+        function updateScore() {
+            score += 10;
+            scoreDisplay.innerText = `Score: ${score}`;
+        }
+    </script>
+</body>
+</html>
